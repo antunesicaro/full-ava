@@ -11,6 +11,9 @@ import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela PACIENTE
 * @generated
@@ -21,6 +24,7 @@ import cronapi.swagger.CronappSwagger;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Paciente")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Paciente implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -39,6 +43,7 @@ public class Paciente implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Cpf", mask="999.999.999-99;0", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "cpf", nullable = false, insertable=true, updatable=true)
         private java.lang.String cpf = UUID.randomUUID().toString().toUpperCase();
 
@@ -47,6 +52,7 @@ public class Paciente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="INTEGER", label="Numero De Consultas")
     @Column(name = "numeroDeConsultas", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Integer numeroDeConsultas;
@@ -55,6 +61,7 @@ public class Paciente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Ip Do Paciente")
     @Column(name = "ipDoPaciente", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String ipDoPaciente;

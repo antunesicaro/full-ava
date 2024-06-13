@@ -11,6 +11,9 @@ import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela SALA
 * @generated
@@ -20,6 +23,7 @@ import cronapi.swagger.CronappSwagger;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Sala")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Sala implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Sala implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class Sala implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Name")
     @Column(name = "name", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String name;
@@ -46,6 +52,7 @@ public class Sala implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Url")
     @Column(name = "url", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String url;

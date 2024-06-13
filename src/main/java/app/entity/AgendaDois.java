@@ -15,16 +15,16 @@ import cronapi.swagger.CronappSwagger;
 import cronapp.framework.core.persistence.*;
 
 /**
-* Classe que representa a tabela AGENDAMENTO
+* Classe que representa a tabela AGENDADOIS
 * @generated
 */
 @javax.persistence.Entity
-@javax.persistence.Table(name = "\"AGENDAMENTO\"")
+@javax.persistence.Table(name = "\"AGENDADOIS\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.Agendamento")
+@JsonFilter("app.entity.AgendaDois")
 @CronappTable(role=CronappTableRole.CLASS)
-public class Agendamento implements Serializable {
+public class AgendaDois implements Serializable {
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -135,17 +135,17 @@ public class Agendamento implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="fk_user", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+    @CronappColumn(attributeType="STRING", label="Usuario")
+    @Column(name = "usuario", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private User user;
+        private java.lang.String usuario;
 
 
     /**
     * Construtor
     * @generated
     */
-    public Agendamento(){
+    public AgendaDois(){
     }
 
     /**
@@ -162,7 +162,7 @@ public class Agendamento implements Serializable {
     * @param id id
     * @generated
     */
-    public Agendamento setId(java.lang.String id) {
+    public AgendaDois setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -180,7 +180,7 @@ public class Agendamento implements Serializable {
     * @param titulo titulo
     * @generated
     */
-    public Agendamento setTitulo(java.lang.String titulo) {
+    public AgendaDois setTitulo(java.lang.String titulo) {
         this.titulo = titulo;
         return this;
     }
@@ -198,7 +198,7 @@ public class Agendamento implements Serializable {
     * @param start start
     * @generated
     */
-    public Agendamento setStart(java.util.Date start) {
+    public AgendaDois setStart(java.util.Date start) {
         this.start = start;
         return this;
     }
@@ -216,7 +216,7 @@ public class Agendamento implements Serializable {
     * @param end end
     * @generated
     */
-    public Agendamento setEnd(java.util.Date end) {
+    public AgendaDois setEnd(java.util.Date end) {
         this.end = end;
         return this;
     }
@@ -234,7 +234,7 @@ public class Agendamento implements Serializable {
     * @param startTimeZone startTimeZone
     * @generated
     */
-    public Agendamento setStartTimeZone(java.lang.String startTimeZone) {
+    public AgendaDois setStartTimeZone(java.lang.String startTimeZone) {
         this.startTimeZone = startTimeZone;
         return this;
     }
@@ -252,7 +252,7 @@ public class Agendamento implements Serializable {
     * @param endTimeZone endTimeZone
     * @generated
     */
-    public Agendamento setEndTimeZone(java.lang.String endTimeZone) {
+    public AgendaDois setEndTimeZone(java.lang.String endTimeZone) {
         this.endTimeZone = endTimeZone;
         return this;
     }
@@ -270,7 +270,7 @@ public class Agendamento implements Serializable {
     * @param descricao descricao
     * @generated
     */
-    public Agendamento setDescricao(java.lang.String descricao) {
+    public AgendaDois setDescricao(java.lang.String descricao) {
         this.descricao = descricao;
         return this;
     }
@@ -288,7 +288,7 @@ public class Agendamento implements Serializable {
     * @param reccorenciarepeticao reccorenciarepeticao
     * @generated
     */
-    public Agendamento setReccorenciarepeticao(java.lang.String reccorenciarepeticao) {
+    public AgendaDois setReccorenciarepeticao(java.lang.String reccorenciarepeticao) {
         this.reccorenciarepeticao = reccorenciarepeticao;
         return this;
     }
@@ -306,7 +306,7 @@ public class Agendamento implements Serializable {
     * @param recorrenciaregra recorrenciaregra
     * @generated
     */
-    public Agendamento setRecorrenciaregra(java.lang.String recorrenciaregra) {
+    public AgendaDois setRecorrenciaregra(java.lang.String recorrenciaregra) {
         this.recorrenciaregra = recorrenciaregra;
         return this;
     }
@@ -324,7 +324,7 @@ public class Agendamento implements Serializable {
     * @param recorrenciaexecao recorrenciaexecao
     * @generated
     */
-    public Agendamento setRecorrenciaexecao(java.lang.String recorrenciaexecao) {
+    public AgendaDois setRecorrenciaexecao(java.lang.String recorrenciaexecao) {
         this.recorrenciaexecao = recorrenciaexecao;
         return this;
     }
@@ -342,26 +342,26 @@ public class Agendamento implements Serializable {
     * @param isallday isallday
     * @generated
     */
-    public Agendamento setIsallday(java.lang.Boolean isallday) {
+    public AgendaDois setIsallday(java.lang.Boolean isallday) {
         this.isallday = isallday;
         return this;
     }
     /**
-    * Obtém user
-    * return user
+    * Obtém usuario
+    * return usuario
     * @generated
     */
-    public User getUser() {
-        return this.user;
+    public java.lang.String getUsuario() {
+        return this.usuario;
     }
 
     /**
-    * Define user
-    * @param user user
+    * Define usuario
+    * @param usuario usuario
     * @generated
     */
-    public Agendamento setUser(User user) {
-        this.user = user;
+    public AgendaDois setUsuario(java.lang.String usuario) {
+        this.usuario = usuario;
         return this;
     }
 
@@ -372,7 +372,7 @@ public class Agendamento implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-Agendamento object = (Agendamento)obj;
+AgendaDois object = (AgendaDois)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }

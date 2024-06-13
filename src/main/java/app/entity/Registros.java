@@ -11,6 +11,9 @@ import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela REGISTROS
 * @generated
@@ -20,6 +23,7 @@ import cronapi.swagger.CronappSwagger;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Registros")
+@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
 public class Registros implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Registros implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class Registros implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Avaliacao Psicologica")
     @Column(name = "avaliacaoPsicologica", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String avaliacaoPsicologica;
@@ -46,6 +52,7 @@ public class Registros implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Registro")
     @Column(name = "registro", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String registro;

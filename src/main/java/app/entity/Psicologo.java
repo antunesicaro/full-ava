@@ -11,6 +11,9 @@ import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela PSICOLOGO
 * @generated
@@ -21,6 +24,7 @@ import cronapi.swagger.CronappSwagger;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Psicologo")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Psicologo implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -39,6 +43,7 @@ public class Psicologo implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Crp", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "crp", nullable = false, insertable=true, updatable=true)
         private java.lang.String crp = UUID.randomUUID().toString().toUpperCase();
 

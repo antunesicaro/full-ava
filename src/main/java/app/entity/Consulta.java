@@ -11,6 +11,9 @@ import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela CONSULTA
 * @generated
@@ -20,6 +23,7 @@ import cronapi.swagger.CronappSwagger;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Consulta")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Consulta implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Consulta implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -39,6 +44,7 @@ public class Consulta implements Serializable {
     * @generated
     */
     @Temporal(TemporalType.TIMESTAMP)
+    @CronappColumn(attributeType="DATETIME", label="Data")
     @Column(name = "data", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.util.Date data;
@@ -47,6 +53,7 @@ public class Consulta implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Descricao")
     @Column(name = "descricao", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String descricao;

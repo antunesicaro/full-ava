@@ -1,18 +1,18 @@
 {
-  "customId": "agendPsic",
-  "queryName": "Agendamento personalizado",
+  "customId": "query104379",
+  "queryName": "Agenda Dois",
   "sourceType": "entityFullName",
   "baseEntity": null,
   "blockly": null,
-  "entitySimpleName": "Agendamento",
-  "entityFullName": "app.entity.Agendamento",
+  "entitySimpleName": "AgendaDois",
+  "entityFullName": "app.entity.AgendaDois",
   "query": {
     "isValid": true,
     "rulesEntity": [
       {
-        "entity": "Agendamento",
+        "entity": "AgendaDois",
         "alias": "a",
-        "namespace": "app.entity.Agendamento"
+        "namespace": "app.entity.AgendaDois"
       }
     ],
     "rulesSelect": [
@@ -48,36 +48,6 @@
   },
   "events": {
     "beforeInsert": {
-      "blocklyClass": "blockly.AgendaTeste",
-      "blocklyMethod": "antesDeinserir",
-      "blocklyLanguage": "java",
-      "blocklyParams": [
-        {
-          "name": "Consulta a Entidades\u003capp.entity.Agendamento\u003e",
-          "value": "data",
-          "type": "CUSTOM"
-        }
-      ],
-      "blocklyJson": {
-        "library": false,
-        "namespace": "blockly.AgendaTeste",
-        "sourcePath": "src/main/java/blockly/AgendaTeste.blockly",
-        "language": "java",
-        "class": "blockly.AgendaTeste",
-        "methods": [
-          {
-            "name": "antesDeinserir",
-            "hasReturn": "true",
-            "params": [
-              "Consulta a Entidades\u003capp.entity.Agendamento\u003e"
-            ]
-          }
-        ]
-      }
-    },
-    "beforeUpdate": null,
-    "beforeDelete": null,
-    "afterInsert": {
       "type": "server",
       "blocklyMethod": "antesDeinserir",
       "blocklyClass": "blockly.AgendaTeste",
@@ -112,6 +82,9 @@
         ]
       }
     },
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
     "afterUpdate": null,
     "afterDelete": null,
     "onNavigate": null,
@@ -130,8 +103,7 @@
     "recorrenciaregra": null,
     "recorrenciaexecao": null,
     "isallday": null,
-    "user": "oi",
-    "user_name": null
+    "usuario": null
   },
   "defaultValuesProperties": {
     "id": null,
@@ -145,8 +117,7 @@
     "recorrenciaregra": null,
     "recorrenciaexecao": null,
     "isallday": null,
-    "user": null,
-    "user_name": null
+    "usuario": null
   },
   "security": {
     "id": null,
@@ -160,8 +131,7 @@
     "recorrenciaregra": null,
     "recorrenciaexecao": null,
     "isallday": null,
-    "user": null,
-    "user_name": null
+    "usuario": null
   },
   "calcFields": {},
   "calcFieldsSecurity": {},
@@ -171,7 +141,7 @@
     "primaryKey": null,
     "foreignKey": null
   },
-  "serviceUrl": "api/cronapi/odata/v2/app/query51928/",
+  "serviceUrl": "api/cronapi/odata/v2/app/query104379/",
   "audit": false,
   "swagger": false,
   "library": false
