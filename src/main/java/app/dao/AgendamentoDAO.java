@@ -17,8 +17,8 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("app-PsiDAO")
+@Repository("app-AgendamentoDAO")
 @Transactional(transactionManager="app-TransactionManager")
-public interface PsiDAO extends JpaRepository<Psi, java.lang.String> {
+public interface AgendamentoDAO extends JpaRepository<Agendamento, java.lang.String> {
 
 }

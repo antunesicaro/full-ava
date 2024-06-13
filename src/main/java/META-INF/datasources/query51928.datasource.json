@@ -1,0 +1,286 @@
+{
+  "customId": "agendPsic",
+  "queryName": "Agendamento personalizado",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Agendamento",
+  "entityFullName": "app.entity.Agendamento",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Agendamento",
+        "namespace": "app.entity.Agendamento",
+        "dataSourceOptions": {
+          "id": "app.Agendamento",
+          "customId": "Agendamento",
+          "customQueryName": "app.Agendamento",
+          "paramValues": [],
+          "entityFullName": "app.entity.Agendamento",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "titulo",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "start",
+              "type": "DateTime",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "end",
+              "type": "DateTime",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "startTimeZone",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "endTimeZone",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "descricao",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "reccorenciarepeticao",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "recorrenciaregra",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "recorrenciaexecao",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "isallday",
+              "type": "Boolean",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "usuario",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "key": true
+            },
+            {
+              "name": "usuario_name",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "Agendamento",
+          "fullName": "app.entity.Agendamento",
+          "labelName": "app.entity.Agendamento (Agendamento)"
+        },
+        "alias": "a",
+        "name": "Agendamento"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "a",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "a.user.id",
+          "field": "a.user.id",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "value": ":userId",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "getUserLoggedId",
+        "blocklyClass": "blockly.User",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.User",
+          "sourcePath": "src/main/java/blockly/User.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "getUserLoggedId",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "user": {
+      "type": "server",
+      "blocklyMethod": "getUserLoggedId2",
+      "blocklyClass": "blockly.User",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.User",
+        "sourcePath": "src/main/java/blockly/User.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "getUserLoggedId",
+            "hasReturn": "true",
+            "params": []
+          },
+          {
+            "name": "getUserLoggedId2",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    }
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "user": null
+  },
+  "security": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "user": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query51928/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}
