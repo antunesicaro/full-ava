@@ -8,30 +8,196 @@
   "entityFullName": "app.entity.AgendaDois",
   "query": {
     "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
     "rulesEntity": [
       {
         "entity": "AgendaDois",
-        "alias": "a",
-        "namespace": "app.entity.AgendaDois"
+        "namespace": "app.entity.AgendaDois",
+        "dataSourceOptions": {
+          "id": "app.AgendaDois",
+          "customId": "AgendaDois",
+          "customQueryName": "app.AgendaDois",
+          "paramValues": [],
+          "entityFullName": "app.entity.AgendaDois",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "titulo",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "start",
+              "type": "DateTime",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "end",
+              "type": "DateTime",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "startTimeZone",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "endTimeZone",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "descricao",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "reccorenciarepeticao",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "recorrenciaregra",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "recorrenciaexecao",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "isallday",
+              "type": "Boolean",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "usuario",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": true
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "AgendaDois",
+          "fullName": "app.entity.AgendaDois",
+          "labelName": "app.entity.AgendaDois (AgendaDois)"
+        },
+        "alias": "a"
       }
     ],
     "rulesSelect": [
       {
         "func": "get",
-        "field": "a"
+        "field": "a",
+        "type": "string"
       }
     ],
+    "rulesJoin": [],
     "rulesGroupBy": [],
     "rulesHaving": [],
     "rulesOrderBy": [],
     "rules": {
       "condition": "AND",
+      "rules": [
+        {
+          "id": "a.usuario",
+          "field": "a.usuario",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "valueType": "param",
+          "value": ":usuario",
+          "valueIsField": false
+        }
+      ],
       "not": false,
-      "valid": true,
-      "rules": []
-    }
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
   },
-  "queryParamsValues": [],
+  "queryParamsValues": [
+    {
+      "fieldName": "usuario",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "retornaIdUserLogado",
+        "blocklyClass": "blockly.AgendaTeste",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "id": "4f9506e1",
+            "name": "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.AgendaTeste",
+          "sourcePath": "src/main/java/blockly/AgendaTeste.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "antesDeinserir",
+              "hasReturn": "true",
+              "params": [
+                "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+              ]
+            },
+            {
+              "name": "retornaIdUserLogado",
+              "hasReturn": "true",
+              "params": [
+                "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
   "verbs": {
     "GET": true,
     "GETAuthorities": null,
