@@ -4,8 +4,8 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
         <class>app.entity.UserRole</class>
-        <class>app.entity.Agendamento</class>
         <class>app.entity.ApplicationUser</class>
+        <class>app.entity.PsiOrPaci</class>
         <class>app.entity.User</class>
         <class>app.entity.Paciente</class>
         <class>app.entity.AgendaDois</class>
