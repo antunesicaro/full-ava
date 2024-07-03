@@ -1,0 +1,114 @@
+{
+  "customId": "query499355",
+  "queryName": "Agenda completa ADMIN",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "AgendaDois",
+  "entityFullName": "app.entity.AgendaDois",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "AgendaDois",
+        "alias": "a",
+        "namespace": "app.entity.AgendaDois"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "a"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "usuario": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "usuario": null
+  },
+  "security": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "usuario": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query499355/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}
