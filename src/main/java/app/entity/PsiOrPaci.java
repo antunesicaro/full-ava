@@ -52,15 +52,6 @@ public class PsiOrPaci implements Serializable {
     /**
     * @generated
     */
-    @CronappColumn(attributeType="BOOLEAN", label="Ativos")
-    @Column(name = "ativos", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.Boolean ativos;
-
-
-    /**
-    * @generated
-    */
     @ManyToOne
     @JoinColumn(name="fk_user", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
@@ -108,24 +99,6 @@ public class PsiOrPaci implements Serializable {
     */
     public PsiOrPaci setEscolha(java.lang.Integer escolha) {
         this.escolha = escolha;
-        return this;
-    }
-    /**
-    * Obtém ativos
-    * return ativos
-    * @generated
-    */
-    public java.lang.Boolean getAtivos() {
-        return this.ativos;
-    }
-
-    /**
-    * Define ativos
-    * @param ativos ativos
-    * @generated
-    */
-    public PsiOrPaci setAtivos(java.lang.Boolean ativos) {
-        this.ativos = ativos;
         return this;
     }
     /**

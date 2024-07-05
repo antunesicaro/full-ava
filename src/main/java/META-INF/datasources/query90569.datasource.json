@@ -1,11 +1,11 @@
 {
-  "customId": "query104379",
-  "queryName": "Agenda Dois",
+  "customId": "query90569",
+  "queryName": "Tela de escolha personalizada psi or paci",
   "sourceType": "entityFullName",
   "baseEntity": null,
   "blockly": null,
-  "entitySimpleName": "AgendaDois",
-  "entityFullName": "app.entity.AgendaDois",
+  "entitySimpleName": "PsiOrPaci",
+  "entityFullName": "app.entity.PsiOrPaci",
   "query": {
     "isValid": true,
     "isEmpty": false,
@@ -15,14 +15,14 @@
     "type": "select",
     "rulesEntity": [
       {
-        "entity": "AgendaDois",
-        "namespace": "app.entity.AgendaDois",
+        "entity": "PsiOrPaci",
+        "namespace": "app.entity.PsiOrPaci",
         "dataSourceOptions": {
-          "id": "app.AgendaDois",
-          "customId": "AgendaDois",
-          "customQueryName": "app.AgendaDois",
+          "id": "app.PsiOrPaci",
+          "customId": "PsiOrPaci",
+          "customQueryName": "app.PsiOrPaci",
           "paramValues": [],
-          "entityFullName": "app.entity.AgendaDois",
+          "entityFullName": "app.entity.PsiOrPaci",
           "schemaFields": [
             {
               "name": "id",
@@ -32,77 +32,14 @@
               "key": false
             },
             {
-              "name": "titulo",
-              "type": "String",
-              "nullable": true,
+              "name": "escolha",
+              "type": "Int32",
+              "nullable": false,
               "notEmpty": false,
               "key": false
             },
             {
-              "name": "start",
-              "type": "DateTime",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "end",
-              "type": "DateTime",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "startTimeZone",
-              "type": "String",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "endTimeZone",
-              "type": "String",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "descricao",
-              "type": "String",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "reccorenciarepeticao",
-              "type": "String",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "recorrenciaregra",
-              "type": "String",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "recorrenciaexecao",
-              "type": "String",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "isallday",
-              "type": "Boolean",
-              "nullable": true,
-              "notEmpty": false,
-              "key": false
-            },
-            {
-              "name": "usuario",
+              "name": "user",
               "type": "String",
               "nullable": true,
               "notEmpty": false,
@@ -114,22 +51,28 @@
               "nullable": false,
               "notEmpty": false,
               "key": true
+            },
+            {
+              "name": "user_name",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
             }
           ],
           "type": "entity",
           "hasError": false,
-          "customName": "AgendaDois",
-          "fullName": "app.entity.AgendaDois",
-          "labelName": "app.entity.AgendaDois (AgendaDois)"
+          "customName": "PsiOrPaci",
+          "fullName": "app.entity.PsiOrPaci",
+          "labelName": "app.entity.PsiOrPaci (PsiOrPaci)"
         },
-        "alias": "a",
-        "name": "AgendaDois"
+        "alias": "p"
       }
     ],
     "rulesSelect": [
       {
         "func": "get",
-        "field": "a",
+        "field": "p",
         "type": "string"
       }
     ],
@@ -141,13 +84,13 @@
       "condition": "AND",
       "rules": [
         {
-          "id": "a.usuario",
-          "field": "a.usuario",
+          "id": "p.user.id",
+          "field": "p.user.id",
           "type": "string",
           "input": "text",
           "operator": "equal",
           "valueType": "param",
-          "value": ":usuario",
+          "value": ":userId",
           "valueIsField": false
         }
       ],
@@ -161,7 +104,7 @@
   },
   "queryParamsValues": [
     {
-      "fieldName": "usuario",
+      "fieldName": "userId",
       "fieldValue": {
         "type": "server",
         "blocklyMethod": "retornaIdUserLogado",
@@ -214,9 +157,22 @@
     "COUNTAuthorities": null
   },
   "events": {
-    "beforeInsert": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "escolha": null,
+    "user": {
       "type": "server",
-      "blocklyMethod": "antesDeinserir",
+      "blocklyMethod": "retornaIdUserLogado",
       "blocklyClass": "blockly.AgendaTeste",
       "blocklyLanguage": "java",
       "blocklyParams": [
@@ -240,65 +196,34 @@
             ]
           },
           {
-            "name": "depoisDeInserir",
+            "name": "retornaIdUserLogado",
             "hasReturn": "true",
             "params": [
               "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
             ]
           }
         ]
-      }
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
     },
-    "beforeUpdate": null,
-    "beforeDelete": null,
-    "afterInsert": null,
-    "afterUpdate": null,
-    "afterDelete": null,
-    "onNavigate": null,
-    "onAuthorize": null,
-    "onError": null
-  },
-  "defaultValues": {
-    "id": null,
-    "titulo": null,
-    "start": null,
-    "end": null,
-    "startTimeZone": null,
-    "endTimeZone": null,
-    "descricao": null,
-    "reccorenciarepeticao": null,
-    "recorrenciaregra": null,
-    "recorrenciaexecao": null,
-    "isallday": null,
-    "usuario": null
+    "user_name": null
   },
   "defaultValuesProperties": {
     "id": null,
-    "titulo": null,
-    "start": null,
-    "end": null,
-    "startTimeZone": null,
-    "endTimeZone": null,
-    "descricao": null,
-    "reccorenciarepeticao": null,
-    "recorrenciaregra": null,
-    "recorrenciaexecao": null,
-    "isallday": null,
-    "usuario": null
+    "escolha": null,
+    "user": null,
+    "user_name": null
   },
   "security": {
     "id": null,
-    "titulo": null,
-    "start": null,
-    "end": null,
-    "startTimeZone": null,
-    "endTimeZone": null,
-    "descricao": null,
-    "reccorenciarepeticao": null,
-    "recorrenciaregra": null,
-    "recorrenciaexecao": null,
-    "isallday": null,
-    "usuario": null
+    "escolha": null,
+    "user": null,
+    "user_name": null
   },
   "calcFields": {},
   "calcFieldsSecurity": {},
@@ -308,7 +233,7 @@
     "primaryKey": null,
     "foreignKey": null
   },
-  "serviceUrl": "api/cronapi/odata/v2/app/query104379/",
+  "serviceUrl": "api/cronapi/odata/v2/app/query90569/",
   "audit": false,
   "swagger": false,
   "library": false
