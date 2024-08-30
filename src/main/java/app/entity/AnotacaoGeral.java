@@ -22,6 +22,7 @@ import cronapp.framework.core.persistence.*;
 @javax.persistence.Table(name = "\"ANOTACAOGERAL\"")
 @XmlRootElement
 @CronappSecurity
+@CronappSwagger
 @JsonFilter("app.entity.AnotacaoGeral")
 @CronappTable(role=CronappTableRole.CLASS)
 public class AnotacaoGeral implements Serializable {
@@ -65,6 +66,15 @@ public class AnotacaoGeral implements Serializable {
     @Column(name = "anotacaoUsuario", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String anotacaoUsuario;
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="STRING", label="Linkdachamada")
+    @Column(name = "linkdachamada", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String linkdachamada;
 
 
     /**
@@ -144,6 +154,24 @@ public class AnotacaoGeral implements Serializable {
     */
     public AnotacaoGeral setAnotacaoUsuario(java.lang.String anotacaoUsuario) {
         this.anotacaoUsuario = anotacaoUsuario;
+        return this;
+    }
+    /**
+    * Obtém linkdachamada
+    * return linkdachamada
+    * @generated
+    */
+    public java.lang.String getLinkdachamada() {
+        return this.linkdachamada;
+    }
+
+    /**
+    * Define linkdachamada
+    * @param linkdachamada linkdachamada
+    * @generated
+    */
+    public AnotacaoGeral setLinkdachamada(java.lang.String linkdachamada) {
+        this.linkdachamada = linkdachamada;
         return this;
     }
 

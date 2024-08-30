@@ -1,0 +1,220 @@
+{
+  "customId": "query1168_1",
+  "queryName": "Infos filtrada PACIENTE final",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "AnotacaoGeral",
+  "entityFullName": "app.entity.AnotacaoGeral",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "AnotacaoGeral",
+        "namespace": "app.entity.AnotacaoGeral",
+        "dataSourceOptions": {
+          "id": "app.AnotacaoGeral",
+          "customId": "AnotacaoGeral",
+          "customQueryName": "app.AnotacaoGeral",
+          "paramValues": [],
+          "entityFullName": "app.entity.AnotacaoGeral",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "quantidadeSessao",
+              "type": "Int32",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "user",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "anotacaoUsuario",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "linkdachamada",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": true
+            },
+            {
+              "name": "user_name",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "AnotacaoGeral",
+          "fullName": "app.entity.AnotacaoGeral",
+          "labelName": "app.entity.AnotacaoGeral (AnotacaoGeral)"
+        },
+        "alias": "a"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "a",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "a.user.id",
+          "field": "a.user.id",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "valueType": "param",
+          "value": ":userId",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "retornaIdUserLogado",
+        "blocklyClass": "blockly.AgendaTeste",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "id": "4f9506e1",
+            "name": "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.AgendaTeste",
+          "sourcePath": "src/main/java/blockly/AgendaTeste.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "antesDeinserir",
+              "hasReturn": "true",
+              "params": [
+                "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+              ]
+            },
+            {
+              "name": "retornaIdUserLogado",
+              "hasReturn": "true",
+              "params": [
+                "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "quantidadeSessao": null,
+    "user": null,
+    "anotacaoUsuario": null,
+    "linkdachamada": null,
+    "user_name": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "quantidadeSessao": null,
+    "user": null,
+    "anotacaoUsuario": null,
+    "linkdachamada": null,
+    "user_name": null
+  },
+  "security": {
+    "id": null,
+    "quantidadeSessao": null,
+    "user": null,
+    "anotacaoUsuario": null,
+    "linkdachamada": null,
+    "user_name": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query1168_1/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}
