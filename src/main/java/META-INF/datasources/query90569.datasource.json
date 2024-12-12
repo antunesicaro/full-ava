@@ -1,0 +1,240 @@
+{
+  "customId": "query90569",
+  "queryName": "Tela de escolha personalizada psi or paci",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "PsiOrPaci",
+  "entityFullName": "app.entity.PsiOrPaci",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "PsiOrPaci",
+        "namespace": "app.entity.PsiOrPaci",
+        "dataSourceOptions": {
+          "id": "app.PsiOrPaci",
+          "customId": "PsiOrPaci",
+          "customQueryName": "app.PsiOrPaci",
+          "paramValues": [],
+          "entityFullName": "app.entity.PsiOrPaci",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "escolha",
+              "type": "Int32",
+              "nullable": false,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "user",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "notEmpty": false,
+              "key": true
+            },
+            {
+              "name": "user_name",
+              "type": "String",
+              "nullable": true,
+              "notEmpty": false,
+              "key": false
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "PsiOrPaci",
+          "fullName": "app.entity.PsiOrPaci",
+          "labelName": "app.entity.PsiOrPaci (PsiOrPaci)"
+        },
+        "alias": "p"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "p",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "p.user.id",
+          "field": "p.user.id",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "valueType": "param",
+          "value": ":userId",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "retornaIdUserLogado",
+        "blocklyClass": "blockly.AgendaTeste",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "id": "4f9506e1",
+            "name": "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.AgendaTeste",
+          "sourcePath": "src/main/java/blockly/AgendaTeste.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "antesDeinserir",
+              "hasReturn": "true",
+              "params": [
+                "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+              ]
+            },
+            {
+              "name": "retornaIdUserLogado",
+              "hasReturn": "true",
+              "params": [
+                "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "escolha": null,
+    "user": {
+      "type": "server",
+      "blocklyMethod": "retornaIdUserLogado",
+      "blocklyClass": "blockly.AgendaTeste",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "4f9506e1",
+          "name": "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.AgendaTeste",
+        "sourcePath": "src/main/java/blockly/AgendaTeste.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "antesDeinserir",
+            "hasReturn": "true",
+            "params": [
+              "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+            ]
+          },
+          {
+            "name": "retornaIdUserLogado",
+            "hasReturn": "true",
+            "params": [
+              "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    },
+    "user_name": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "escolha": null,
+    "user": null,
+    "user_name": null
+  },
+  "security": {
+    "id": null,
+    "escolha": null,
+    "user": null,
+    "user_name": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query90569/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}

@@ -47,6 +47,7 @@
       "chkApi": false,
       "dataSource": "jdbc/main",
       "disableCache": false,
+      "generationType": "drop-and-create-tables",
       "id": "paperCell",
       "methods": [],
       "namespace": "app",
@@ -76,9 +77,830 @@
       "angle": 0,
       "attributes": [
         "id:java.lang.String",
+        "titulo:java.lang.String",
+        "start:java.sql.Timestamp",
+        "end:java.sql.Timestamp",
+        "startTimeZone:java.lang.String",
+        "endTimeZone:java.lang.String",
+        "descricao:java.lang.String",
+        "reccorenciarepeticao:java.lang.String",
+        "recorrenciaregra:java.lang.String",
+        "recorrenciaexecao:java.lang.String",
+        "isallday:java.lang.Boolean",
+        "usuario:java.lang.String"
+      ],
+      "attrs": {
+        ".": {
+          "display": "normal"
+        },
+        ".uml-class-attrs-rect": {
+          "fill": "#F0F0F0",
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "height": 260,
+          "stroke": "#C2C2C2",
+          "transform": "translate(0,40)"
+        },
+        ".uml-class-attrs-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "text": "* id\ntitulo\nstart\nend\nstartTimeZone\nendTimeZone\ndescricao\nreccorenciarepeticao\nrecorrenciaregra\nrecorrenciaexecao\nisallday\nusuario\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "ref-x": 93,
+          "text": "Texto\nTexto\nCarimbo de Data e Hora\nCarimbo de Data e Hora\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\nLógico\nTexto\n"
+        },
+        ".uml-class-methods-rect": {
+          "fill": "#F0F0F0",
+          "height": 20,
+          "stroke": "#C2C2C2",
+          "stroke-width": 1,
+          "transform": "translate(0,300)"
+        },
+        ".uml-class-methods-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "fill": "#F0F0F0",
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "height": 40,
+          "stroke": "#C2C2C2",
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "text": "AgendaDois"
+        }
+      },
+      "audit": false,
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "id",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "isNotEmpty": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "titulo",
+          "type": "java.lang.String",
+          "dbName": "titulo",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Titulo",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "start",
+          "type": "java.sql.Timestamp",
+          "dbName": "start",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Start",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "end",
+          "type": "java.sql.Timestamp",
+          "dbName": "end",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "End",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "startTimeZone",
+          "type": "java.lang.String",
+          "dbName": "startTimeZone",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Start Time Zone",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "endTimeZone",
+          "type": "java.lang.String",
+          "dbName": "endTimeZone",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "End Time Zone",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "descricao",
+          "type": "java.lang.String",
+          "dbName": "descricao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Descricao",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "reccorenciarepeticao",
+          "type": "java.lang.String",
+          "dbName": "reccorenciarepeticao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Reccorenciarepeticao",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "recorrenciaregra",
+          "type": "java.lang.String",
+          "dbName": "recorrenciaregra",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Recorrenciaregra",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "recorrenciaexecao",
+          "type": "java.lang.String",
+          "dbName": "recorrenciaexecao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Recorrenciaexecao",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "isallday",
+          "type": "java.lang.Boolean",
+          "dbName": "isallday",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Isallday",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "usuario",
+          "type": "java.lang.String",
+          "dbName": "usuario",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Usuario",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        }
+      ],
+      "generateView": "Auto",
+      "id": "53015068-9b80-4986-83cb-6a9ee7fbed1e",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "AgendaDois",
+      "position": {
+        "x": 1066,
+        "y": 104
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Class",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 220,
+        "width": 234
+      },
+      "swagger": false,
+      "tableName": "",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "usePhysicalNames": false,
+      "z": 60
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "quantidadeSessao:java.lang.Integer",
+        "user:User",
+        "anotacaoUsuario:java.lang.String",
+        "linkdachamada:java.lang.String"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "fill": "#F0F0F0",
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "height": 120,
+          "stroke": "#C2C2C2",
+          "transform": "translate(0,40)"
+        },
+        ".uml-class-attrs-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "text": "* id\nquantidadeSessao\nuser\nanotacaoUsuario\nlinkdachamada\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "ref-x": 175,
+          "text": "Texto\nInteiro\nUser\nTexto\nTexto\n"
+        },
+        ".uml-class-methods-rect": {
+          "fill": "#F0F0F0",
+          "height": 20,
+          "stroke": "#C2C2C2",
+          "stroke-width": 1,
+          "transform": "translate(0,160)"
+        },
+        ".uml-class-methods-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "fill": "#F0F0F0",
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "height": 40,
+          "stroke": "#C2C2C2",
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "text": "AnotacaoGeral"
+        }
+      },
+      "audit": false,
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "id",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "isNotEmpty": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "quantidadeSessao",
+          "type": "java.lang.Integer",
+          "dbName": "quantidadeSessao",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Quantidade Sessao",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "user",
+          "type": "User",
+          "dbName": "fk_user",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "User",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "anotacaoUsuario",
+          "type": "java.lang.String",
+          "dbName": "anotacaoUsuario",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Anotacao Usuario",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "linkdachamada",
+          "type": "java.lang.String",
+          "dbName": "linkdachamada",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Linkdachamada",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        }
+      ],
+      "generateView": "Auto",
+      "id": "b2d01bcf-3432-430b-994c-8607833813a4",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "AnotacaoGeral",
+      "position": {
+        "x": 920,
+        "y": -74
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Class",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 150,
+        "width": 222
+      },
+      "swagger": true,
+      "tableName": "",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "usePhysicalNames": false,
+      "z": 63
+    },
+    {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
         "name:java.lang.String"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -197,8 +1019,8 @@
       "modelType": "Table",
       "name": "Application",
       "position": {
-        "x": 382,
-        "y": 36
+        "x": 326,
+        "y": 106
       },
       "queries": [],
       "realName": "",
@@ -227,6 +1049,9 @@
         "user:User"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -377,8 +1202,8 @@
       "modelType": "Table",
       "name": "ApplicationUser",
       "position": {
-        "x": 1106,
-        "y": 372
+        "x": 1060,
+        "y": 414
       },
       "queries": [],
       "realName": "",
@@ -417,6 +1242,9 @@
         "error:java.lang.String"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -432,8 +1260,8 @@
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 94,
-          "text": "Inteiro\nTexto\nTexto\nData e Hora com Fuso\nTexto Longo\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\n"
+          "ref-x": 140,
+          "text": "Inteiro\nTexto\nTexto\nData e Hora\nTexto Longo\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\nTexto\n"
         },
         ".uml-class-methods-rect": {
           "fill": "#F0F0F0",
@@ -827,7 +1655,7 @@
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 230,
-        "width": 225
+        "width": 216
       },
       "tableName": "AUDIT_LOG",
       "type": "uml.Class",
@@ -845,6 +1673,9 @@
         "appVersion:java.lang.String"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -1111,6 +1942,9 @@
         "user:User"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -1340,8 +2174,8 @@
         "user"
       ],
       "position": {
-        "x": 684,
-        "y": 26
+        "x": 692,
+        "y": 78
       },
       "primaryKeys": [
         "id"
@@ -1376,31 +2210,30 @@
       "angle": 0,
       "attributes": [
         "id:java.lang.String",
-        "user:User",
-        "psi:Psi"
+        "escolha:java.lang.Integer",
+        "user:User"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
-          "fill": "#fffec0",
+          "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "height": 80,
           "stroke": "#C2C2C2",
           "transform": "translate(0,40)"
         },
         ".uml-class-attrs-text": {
-          "fill": "#000",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "* id\nuser\npsi\n"
+          "text": "* id\nescolha\nuser\n"
         },
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 156,
-          "text": "Texto\nUser\nPsi\n"
+          "ref-x": 151,
+          "text": "Texto\nInteiro\nUser\n"
         },
         ".uml-class-methods-rect": {
-          "fill": "#fffec0",
+          "fill": "#F0F0F0",
           "height": 20,
           "stroke": "#C2C2C2",
           "stroke-width": 1,
@@ -1412,7 +2245,7 @@
           "text": ""
         },
         ".uml-class-name-rect": {
-          "fill": "#fffec0",
+          "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "height": 40,
           "stroke": "#C2C2C2",
@@ -1420,7 +2253,7 @@
         },
         ".uml-class-name-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "text": "Patient"
+          "text": "PsiOrPaci"
         }
       },
       "audit": false,
@@ -1429,13 +2262,18 @@
           "name": "id",
           "type": "java.lang.String",
           "dbName": "id",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
           "label": "Id",
           "mask": "",
           "isPrimaryKey": true,
           "isUniqueKey": false,
           "isNullable": false,
-          "multitenantContext": "",
+          "isNotEmpty": false,
           "pkType": "UUID",
+          "multitenantContext": "",
           "jsonIgnore": false,
           "isTransient": false,
           "isInsertable": true,
@@ -1444,22 +2282,74 @@
           "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
+          "sequence": "",
           "isCascade": false,
           "isVersion": false,
-          "idIndex": false,
-          "useOuterJoin": false
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
+        },
+        {
+          "name": "escolha",
+          "type": "java.lang.Integer",
+          "dbName": "escolha",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Escolha",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "isNotEmpty": false,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "user",
           "type": "User",
           "dbName": "fk_user",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
           "label": "User",
           "mask": "",
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": true,
-          "multitenantContext": "",
+          "isNotEmpty": false,
           "pkType": "",
+          "multitenantContext": "",
           "jsonIgnore": false,
           "isTransient": false,
           "isInsertable": true,
@@ -1468,55 +2358,35 @@
           "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
+          "sequence": "",
           "isCascade": false,
           "isVersion": false,
-          "idIndex": false,
-          "useOuterJoin": false
-        },
-        {
-          "name": "psi",
-          "type": "Psi",
-          "dbName": "fk_psi",
-          "label": "Psi",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "multitenantContext": "",
-          "pkType": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "isCascade": false,
-          "isVersion": false,
-          "idIndex": false,
-          "useOuterJoin": false
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         }
       ],
       "generateView": "Auto",
-      "id": "757c37b5-d86a-493b-ba82-0815f0a88357",
+      "id": "87642099-7566-4af4-9677-18d87ea9ed10",
       "isRest": "true",
       "methods": [],
       "modelType": "Table",
-      "name": "Patient",
+      "name": "PsiOrPaci",
       "position": {
-        "x": 1434,
-        "y": 270
+        "x": 714,
+        "y": -230
       },
       "queries": [],
       "realName": "",
-      "restSecurity": {
-        "delete": "Public",
-        "get": "Public",
-        "post": "Public",
-        "put": "Public"
-      },
-      "role": "AssociationClass",
+      "restSecurity": null,
+      "role": "Class",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 130,
@@ -1527,236 +2397,7 @@
       "tableScheme": null,
       "type": "uml.Class",
       "usePhysicalNames": false,
-      "z": 25
-    },
-    {
-      "angle": 0,
-      "attributes": [
-        "id:java.lang.String",
-        "user:User",
-        "especialidade:java.lang.String",
-        "crp:java.lang.String"
-      ],
-      "attrs": {
-        ".uml-class-attrs-rect": {
-          "fill": "#F0F0F0",
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 100,
-          "stroke": "#C2C2C2",
-          "transform": "translate(0,40)"
-        },
-        ".uml-class-attrs-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "text": "* id\nuser\nespecialidade\ncrp\n"
-        },
-        ".uml-class-attrs-value": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "ref-x": 168,
-          "text": "Texto\nUser\nTexto\nTexto\n"
-        },
-        ".uml-class-methods-rect": {
-          "fill": "#F0F0F0",
-          "height": 20,
-          "stroke": "#C2C2C2",
-          "stroke-width": 1,
-          "transform": "translate(0,140)"
-        },
-        ".uml-class-methods-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "text": ""
-        },
-        ".uml-class-name-rect": {
-          "fill": "#F0F0F0",
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 40,
-          "stroke": "#C2C2C2",
-          "transform": "translate(0,0)"
-        },
-        ".uml-class-name-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "text": "Psi"
-        }
-      },
-      "audit": false,
-      "fields": [
-        {
-          "name": "id",
-          "type": "java.lang.String",
-          "dbName": "id",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Id",
-          "mask": "",
-          "isPrimaryKey": true,
-          "isUniqueKey": false,
-          "isNullable": false,
-          "pkType": "UUID",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "user",
-          "type": "User",
-          "dbName": "fk_user",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "User",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "especialidade",
-          "type": "java.lang.String",
-          "dbName": "especialidade",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Especialidade",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "crp",
-          "type": "java.lang.String",
-          "dbName": "crp",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Crp",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        }
-      ],
-      "generateView": "Auto",
-      "id": "6f80f523-6d65-42a0-a233-fdd428840223",
-      "isRest": "true",
-      "methods": [],
-      "modelType": "Table",
-      "name": "Psi",
-      "position": {
-        "x": 1390,
-        "y": 62
-      },
-      "queries": [],
-      "realName": "",
-      "restSecurity": {
-        "delete": "Public",
-        "get": "Public",
-        "post": "Public",
-        "put": "Public"
-      },
-      "role": "Class",
-      "runtimeClass": "cronos.widgets.joint.uml.Class",
-      "size": {
-        "height": 140,
-        "width": 207
-      },
-      "swagger": false,
-      "tableName": "",
-      "tableScheme": null,
-      "type": "uml.Class",
-      "usePhysicalNames": false,
-      "z": 24
+      "z": 61
     },
     {
       "angle": 0,
@@ -1769,6 +2410,9 @@
         "application:Application"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -2059,8 +2703,8 @@
         "normalizedName"
       ],
       "position": {
-        "x": 656,
-        "y": 312
+        "x": 692,
+        "y": 314
       },
       "primaryKeys": [
         "id"
@@ -2099,6 +2743,9 @@
         "securable:Securable"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -2115,7 +2762,7 @@
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 142,
+          "ref-x": 143,
           "text": "Texto\nRole\nSecurable\n"
         },
         ".uml-class-methods-rect": {
@@ -2302,276 +2949,13 @@
       "angle": 0,
       "attributes": [
         "id:java.lang.String",
-        "psi:Psi",
-        "registros:java.lang.String",
-        "objetivos:java.lang.String",
-        "linkVideoChamada:java.lang.String"
-      ],
-      "attrs": {
-        ".uml-class-attrs-rect": {
-          "fill": "#F0F0F0",
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 120,
-          "stroke": "#C2C2C2",
-          "transform": "translate(0,40)"
-        },
-        ".uml-class-attrs-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "text": "* id\npsi\nregistros\nobjetivos\nlinkVideoChamada\n"
-        },
-        ".uml-class-attrs-value": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "ref-x": 177,
-          "text": "Texto\nPsi\nTexto\nTexto\nTexto\n"
-        },
-        ".uml-class-methods-rect": {
-          "fill": "#F0F0F0",
-          "height": 20,
-          "stroke": "#C2C2C2",
-          "stroke-width": 1,
-          "transform": "translate(0,160)"
-        },
-        ".uml-class-methods-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "text": ""
-        },
-        ".uml-class-name-rect": {
-          "fill": "#F0F0F0",
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 40,
-          "stroke": "#C2C2C2",
-          "transform": "translate(0,0)"
-        },
-        ".uml-class-name-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "text": "SalaAtendimento"
-        }
-      },
-      "audit": false,
-      "fields": [
-        {
-          "name": "id",
-          "type": "java.lang.String",
-          "dbName": "id",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Id",
-          "mask": "",
-          "isPrimaryKey": true,
-          "isUniqueKey": false,
-          "isNullable": false,
-          "pkType": "UUID",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "psi",
-          "type": "Psi",
-          "dbName": "fk_psi",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Psi",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "registros",
-          "type": "java.lang.String",
-          "dbName": "registros",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Registros",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "objetivos",
-          "type": "java.lang.String",
-          "dbName": "objetivos",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Objetivos",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "linkVideoChamada",
-          "type": "java.lang.String",
-          "dbName": "linkVideoChamada",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Link Video Chamada",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        }
-      ],
-      "generateView": "Auto",
-      "id": "dcbb0679-3bda-4b01-a970-8e28cd9f707c",
-      "isRest": "true",
-      "methods": [],
-      "modelType": "Table",
-      "name": "SalaAtendimento",
-      "position": {
-        "x": 1756,
-        "y": 134
-      },
-      "queries": [],
-      "realName": "",
-      "restSecurity": {
-        "delete": "Public",
-        "get": "Public",
-        "post": "Public",
-        "put": "Public"
-      },
-      "role": "Class",
-      "runtimeClass": "cronos.widgets.joint.uml.Class",
-      "size": {
-        "height": 150,
-        "width": 216
-      },
-      "swagger": false,
-      "tableName": "",
-      "tableScheme": null,
-      "type": "uml.Class",
-      "usePhysicalNames": false,
-      "z": 28
-    },
-    {
-      "angle": 0,
-      "attributes": [
-        "id:java.lang.String",
         "name:java.lang.String",
         "application:Application"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -2587,7 +2971,7 @@
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 150,
+          "ref-x": 146,
           "text": "Texto\nTexto\nApplication\n"
         },
         ".uml-class-methods-rect": {
@@ -2815,6 +3199,9 @@
         "picture:Image Upload (to Database)"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -2944,6 +3331,7 @@
           "isPrimaryKey": true,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "None",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -2951,6 +3339,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2960,7 +3349,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "accessFailedCount",
@@ -2975,6 +3369,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -2982,6 +3377,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2991,7 +3387,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "email",
@@ -3006,6 +3407,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3013,6 +3415,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3022,7 +3425,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "emailConfirmed",
@@ -3037,6 +3445,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3044,6 +3453,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3053,7 +3463,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "lockoutEnabled",
@@ -3068,6 +3483,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3075,6 +3491,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3084,7 +3501,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "lockoutEnd",
@@ -3099,6 +3521,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": true,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3106,6 +3529,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3115,7 +3539,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "name",
@@ -3130,6 +3559,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3137,6 +3567,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3146,7 +3577,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "normalizedEmail",
@@ -3161,6 +3597,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": true,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3168,6 +3605,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3177,7 +3615,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "normalizedUserName",
@@ -3192,6 +3635,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": true,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3199,6 +3643,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3208,7 +3653,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "password",
@@ -3223,6 +3673,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3230,6 +3681,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": true,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3239,7 +3691,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "phoneNumber",
@@ -3254,6 +3711,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": true,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3261,6 +3719,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3270,7 +3729,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "phoneNumberConfirmed",
@@ -3285,6 +3749,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3292,6 +3757,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3301,7 +3767,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "securityStamp",
@@ -3316,6 +3787,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3323,6 +3795,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3332,7 +3805,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "twoFactorEnabled",
@@ -3347,6 +3825,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3354,6 +3833,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3363,7 +3843,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "userName",
@@ -3378,6 +3863,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": false,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3385,6 +3871,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3394,7 +3881,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "theme",
@@ -3409,6 +3901,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": true,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3416,6 +3909,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3425,7 +3919,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         },
         {
           "name": "picture",
@@ -3440,6 +3939,7 @@
           "isPrimaryKey": false,
           "isUniqueKey": false,
           "isNullable": true,
+          "isNotEmpty": false,
           "pkType": "",
           "multitenantContext": "",
           "jsonIgnore": false,
@@ -3447,6 +3947,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3456,7 +3957,12 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": "",
+          "columnDefinition": ""
         }
       ],
       "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
@@ -3515,8 +4021,8 @@
         "userName"
       ],
       "position": {
-        "x": 984,
-        "y": 38
+        "x": 368,
+        "y": -210
       },
       "primaryKeys": [
         "id"
@@ -3524,10 +4030,10 @@
       "queries": [],
       "requireds": [],
       "restSecurity": {
-        "delete": "Public",
-        "get": "Public",
-        "post": "Public",
-        "put": "Public"
+        "delete": "Administrators;Paciente;Psicologo",
+        "get": "Administrators;Paciente;Psicologo",
+        "post": "Administrators;Paciente;Psicologo",
+        "put": "Administrators;Paciente;Psicologo"
       },
       "role": "Class",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
@@ -3552,10 +4058,12 @@
         "height": 270,
         "width": 231
       },
+      "swagger": true,
       "tableName": "USER",
       "type": "uml.Class",
       "uniqueKeys": [],
-      "z": 2
+      "usePhysicalNames": false,
+      "z": 24
     },
     {
       "angle": 0,
@@ -3565,6 +4073,9 @@
         "user:User"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -3772,6 +4283,9 @@
         "user:User"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -3788,7 +4302,7 @@
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 142,
+          "ref-x": 143,
           "text": "Texto\nSecurable\nUser\n"
         },
         ".uml-class-methods-rect": {
@@ -3988,6 +4502,9 @@
         "application:Application"
       ],
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".uml-class-attrs-rect": {
           "fill": "#fffec0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -4004,7 +4521,7 @@
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 162,
+          "ref-x": 158,
           "text": "Texto\nSecurable\nTexto\nLógico\nLógico\nLógico\nLógico\nLógico\nLógico\nLógico\nLógico\nApplication\n"
         },
         ".uml-class-methods-rect": {
@@ -4442,6 +4959,9 @@
     {
       "associationType": "Association",
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4486,6 +5006,9 @@
     },
     {
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4528,52 +5051,10 @@
       "z": "4"
     },
     {
-      "associationType": "Association",
       "attrs": {
-        ".marker-source": {
-          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
-          "fill": "#cecece"
+        ".": {
+          "display": "normal"
         },
-        ".marker-target": {
-          "d": "",
-          "fill": ""
-        }
-      },
-      "id": "5167c5d8-0800-4504-84d4-7d3c126e3c51",
-      "labels": [
-        {
-          "position": 0.9,
-          "attrs": {
-            "rect": {
-              "fill": "transparent"
-            },
-            "text": {
-              "text": "*",
-              "font-family": "Arial",
-              "font-size": "12px",
-              "fill": "#cecece"
-            }
-          }
-        }
-      ],
-      "name": null,
-      "queries": [],
-      "relationFields": [
-        "psi:target"
-      ],
-      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
-      "source": {
-        "id": "6f80f523-6d65-42a0-a233-fdd428840223"
-      },
-      "target": {
-        "id": "dcbb0679-3bda-4b01-a970-8e28cd9f707c"
-      },
-      "type": "uml.Composition",
-      "vertices": [],
-      "z": 30
-    },
-    {
-      "attrs": {
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4618,6 +5099,9 @@
     {
       "associationType": "Association",
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4672,6 +5156,9 @@
     },
     {
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4726,6 +5213,9 @@
     {
       "associationType": "Association",
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4771,6 +5261,9 @@
     {
       "associationType": "Association",
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4815,6 +5308,9 @@
     },
     {
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4859,6 +5355,9 @@
     {
       "associationType": "Association",
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4902,52 +5401,10 @@
       "z": 20
     },
     {
-      "associationType": "Association",
       "attrs": {
-        ".marker-source": {
-          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
-          "fill": "#cecece"
+        ".": {
+          "display": "normal"
         },
-        ".marker-target": {
-          "d": "",
-          "fill": ""
-        }
-      },
-      "id": "a31a2f55-dde5-44ba-a60d-efbe3d5559cc",
-      "labels": [
-        {
-          "position": 0.9,
-          "attrs": {
-            "rect": {
-              "fill": "transparent"
-            },
-            "text": {
-              "text": "*",
-              "font-family": "Arial",
-              "font-size": "12px",
-              "fill": "#cecece"
-            }
-          }
-        }
-      ],
-      "name": null,
-      "queries": [],
-      "relationFields": [
-        "user:target"
-      ],
-      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
-      "source": {
-        "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0"
-      },
-      "target": {
-        "id": "757c37b5-d86a-493b-ba82-0815f0a88357"
-      },
-      "type": "uml.Composition",
-      "vertices": [],
-      "z": 27
-    },
-    {
-      "attrs": {
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -4990,7 +5447,55 @@
       "z": "4"
     },
     {
+      "associationType": "Association",
       "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "d7fb949e-ca8f-4672-aa6b-d72e61adc176",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "user:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0"
+      },
+      "target": {
+        "id": "b2d01bcf-3432-430b-994c-8607833813a4"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 64
+    },
+    {
+      "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -5044,7 +5549,7 @@
           "fill": ""
         }
       },
-      "id": "f2101529-054d-4d93-babb-6f2748a87a31",
+      "id": "e664d6ea-c799-4244-a724-545cadc9014d",
       "labels": [
         {
           "position": 0.9,
@@ -5071,60 +5576,18 @@
         "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0"
       },
       "target": {
-        "id": "6f80f523-6d65-42a0-a233-fdd428840223"
+        "id": "87642099-7566-4af4-9677-18d87ea9ed10"
       },
       "type": "uml.Composition",
       "vertices": [],
-      "z": 26
+      "z": 62
     },
     {
       "associationType": "Association",
       "attrs": {
-        ".marker-source": {
-          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
-          "fill": "#cecece"
+        ".": {
+          "display": "normal"
         },
-        ".marker-target": {
-          "d": "",
-          "fill": ""
-        }
-      },
-      "id": "f41d14b5-6884-4e7c-af39-58b6d610fee6",
-      "labels": [
-        {
-          "position": 0.9,
-          "attrs": {
-            "rect": {
-              "fill": "transparent"
-            },
-            "text": {
-              "text": "*",
-              "font-family": "Arial",
-              "font-size": "12px",
-              "fill": "#cecece"
-            }
-          }
-        }
-      ],
-      "name": null,
-      "queries": [],
-      "relationFields": [
-        "psi:target"
-      ],
-      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
-      "source": {
-        "id": "6f80f523-6d65-42a0-a233-fdd428840223"
-      },
-      "target": {
-        "id": "757c37b5-d86a-493b-ba82-0815f0a88357"
-      },
-      "type": "uml.Composition",
-      "vertices": [],
-      "z": 29
-    },
-    {
-      "associationType": "Association",
-      "attrs": {
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -5169,6 +5632,9 @@
     },
     {
       "attrs": {
+        ".": {
+          "display": "normal"
+        },
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
           "fill": "#cecece"
@@ -5220,6 +5686,155 @@
       "groupPositions": []
     },
     {
+      "name": "Sistema",
+      "id": "d79ac7c5-422c-4636-b21c-c03d7282d71e",
+      "cells": [
+        "fbe4a477-8332-4235-a9a2-5db4a56fa3d0"
+      ],
+      "groupPositions": [
+        {
+          "idCell": "ae693085-d674-4ee5-9efc-b90af5a19f63",
+          "position": {
+            "x": 1036,
+            "y": 270
+          }
+        },
+        {
+          "idCell": "e0f16cb7-6842-4fdf-8bee-e01cb3f6d49b",
+          "position": {
+            "x": 1080,
+            "y": 126
+          }
+        },
+        {
+          "idCell": "698185fe-407c-4e53-a198-0d03f230b486",
+          "position": {
+            "x": 804,
+            "y": 350
+          }
+        },
+        {
+          "idCell": "0dcb1175-d544-41b0-ab22-5d7f552440ac",
+          "position": {
+            "x": 1090,
+            "y": -196
+          }
+        },
+        {
+          "idCell": "aa9f4141-c84c-4e7f-b261-2aaa2473290c",
+          "position": {
+            "x": 1090,
+            "y": 220
+          }
+        },
+        {
+          "idCell": "a4c5146e-0516-49d8-9608-4093851c2a8a",
+          "position": {
+            "x": 1470,
+            "y": 28
+          }
+        },
+        {
+          "idCell": "0110e0f3-34aa-4f1c-a0ef-83a6813f222b",
+          "position": {
+            "x": 1138,
+            "y": 168
+          }
+        },
+        {
+          "idCell": "419825b6-0276-4baa-855b-f7b19346fbbd",
+          "position": {
+            "x": 962,
+            "y": 124
+          }
+        },
+        {
+          "idCell": "ef1cadf0-4038-4666-86a5-1fc884a8cef5",
+          "position": {
+            "x": 1236,
+            "y": 34
+          }
+        },
+        {
+          "idCell": "9623e926-e04d-4ae4-95d6-d5d94bc105cd",
+          "position": {
+            "x": 1200,
+            "y": -2
+          }
+        },
+        {
+          "idCell": "ef189e2e-ba1b-42d2-96b7-2d321db6bd50",
+          "position": {
+            "x": 1148,
+            "y": -48
+          }
+        },
+        {
+          "idCell": "dcefb607-1242-4035-9f66-174e150eae40",
+          "position": {
+            "x": 940,
+            "y": 222
+          }
+        },
+        {
+          "idCell": "26d9eda8-f832-455b-acaa-34fe691be97a",
+          "position": {
+            "x": 608,
+            "y": 240
+          }
+        },
+        {
+          "idCell": "cd42ed88-6e89-48af-ae35-dffc54d6259e",
+          "position": {
+            "x": 1164,
+            "y": -50
+          }
+        },
+        {
+          "idCell": "ac2dcab1-3389-42dd-af8e-156613817b3b",
+          "position": {
+            "x": 1360,
+            "y": 56
+          }
+        },
+        {
+          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
+          "position": {
+            "x": 638,
+            "y": -188
+          }
+        },
+        {
+          "idCell": "89bb27cc-ae6c-427f-a8b1-2a2de8c49c95",
+          "position": {
+            "x": 800,
+            "y": 108
+          }
+        },
+        {
+          "idCell": "af11017c-920e-44b2-b7f9-5f6b4368ba6a",
+          "position": {
+            "x": 1432,
+            "y": -90
+          }
+        },
+        {
+          "idCell": "c851b860-bdfa-4706-8204-397a7c6d6fd3",
+          "position": {
+            "x": 1028,
+            "y": -214
+          }
+        },
+        {
+          "idCell": "4c656740-fbd5-4ff7-9f87-a7b5c2ac68a1",
+          "position": {
+            "x": 1158,
+            "y": 238
+          }
+        }
+      ]
+    },
+    {
       "name": "",
       "id": "1d7f906f-a526-482d-aaf4-08d227ae8c18",
       "cells": [
@@ -5228,44 +5843,23 @@
         "2016ad54-a0f9-4337-ad10-694a48f0435c",
         "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
         "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
-        "6f80f523-6d65-42a0-a233-fdd428840223",
         "56d9e678-741d-41e6-9b24-bccc58de1598",
-        "757c37b5-d86a-493b-ba82-0815f0a88357",
-        "dcbb0679-3bda-4b01-a970-8e28cd9f707c",
+        "53015068-9b80-4986-83cb-6a9ee7fbed1e",
+        "b2d01bcf-3432-430b-994c-8607833813a4",
         "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
         "b194a533-61d6-4661-b9da-ff80ce2835f9",
         "d92238a3-a37d-4cc6-a543-d0687dc207cd",
         "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
         "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+        "87642099-7566-4af4-9677-18d87ea9ed10",
         "fabe0aea-c05d-44a4-a87c-2e2c0a97e994"
       ],
       "groupPositions": [
         {
-          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
           "position": {
-            "x": 668,
+            "x": 418,
             "y": 594
-          }
-        },
-        {
-          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
-          "position": {
-            "x": 940,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
-          "position": {
-            "x": 100,
-            "y": 34
-          }
-        },
-        {
-          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
-          "position": {
-            "x": 404,
-            "y": 342
           }
         },
         {
@@ -5276,34 +5870,6 @@
           }
         },
         {
-          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
-          "position": {
-            "x": 418,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
-          "position": {
-            "x": 382,
-            "y": 36
-          }
-        },
-        {
-          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
-          "position": {
-            "x": 684,
-            "y": 26
-          }
-        },
-        {
-          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
-          "position": {
-            "x": 984,
-            "y": 38
-          }
-        },
-        {
           "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
           "position": {
             "x": 70,
@@ -5311,17 +5877,115 @@
           }
         },
         {
-          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "idCell": "aa9f4141-c84c-4e7f-b261-2aaa2473290c",
           "position": {
-            "x": 656,
-            "y": 312
+            "x": 1088,
+            "y": 220
           }
         },
         {
-          "idCell": "757c37b5-d86a-493b-ba82-0815f0a88357",
+          "idCell": "ae693085-d674-4ee5-9efc-b90af5a19f63",
           "position": {
-            "x": 1434,
-            "y": 270
+            "x": 1950,
+            "y": -492
+          }
+        },
+        {
+          "idCell": "698185fe-407c-4e53-a198-0d03f230b486",
+          "position": {
+            "x": 1562,
+            "y": 160
+          }
+        },
+        {
+          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
+          "position": {
+            "x": 368,
+            "y": -210
+          }
+        },
+        {
+          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "position": {
+            "x": 668,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "9623e926-e04d-4ae4-95d6-d5d94bc105cd",
+          "position": {
+            "x": 2066,
+            "y": -28
+          }
+        },
+        {
+          "idCell": "6b31e66c-e86c-4a3a-8204-d04218ddf7fc",
+          "position": {
+            "x": 1896,
+            "y": -78
+          }
+        },
+        {
+          "idCell": "c851b860-bdfa-4706-8204-397a7c6d6fd3",
+          "position": {
+            "x": 2082,
+            "y": -248
+          }
+        },
+        {
+          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
+          "position": {
+            "x": 692,
+            "y": 78
+          }
+        },
+        {
+          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "position": {
+            "x": 940,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
+          "position": {
+            "x": 404,
+            "y": 342
+          }
+        },
+        {
+          "idCell": "b2d01bcf-3432-430b-994c-8607833813a4",
+          "position": {
+            "x": 920,
+            "y": -74
+          }
+        },
+        {
+          "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
+          "position": {
+            "x": 326,
+            "y": 106
+          }
+        },
+        {
+          "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
+          "position": {
+            "x": 100,
+            "y": 34
+          }
+        },
+        {
+          "idCell": "cd42ed88-6e89-48af-ae35-dffc54d6259e",
+          "position": {
+            "x": 1092,
+            "y": -82
+          }
+        },
+        {
+          "idCell": "89bb27cc-ae6c-427f-a8b1-2a2de8c49c95",
+          "position": {
+            "x": 2018,
+            "y": 264
           }
         },
         {
@@ -5332,6 +5996,48 @@
           }
         },
         {
+          "idCell": "0ce77750-07d5-4eff-a2bb-ddcef0af2bd0",
+          "position": {
+            "x": 1368,
+            "y": 54
+          }
+        },
+        {
+          "idCell": "6be4fd9d-2f5f-41de-9915-b690e7ceb45a",
+          "position": {
+            "x": 1430,
+            "y": 374
+          }
+        },
+        {
+          "idCell": "87642099-7566-4af4-9677-18d87ea9ed10",
+          "position": {
+            "x": 714,
+            "y": -230
+          }
+        },
+        {
+          "idCell": "53015068-9b80-4986-83cb-6a9ee7fbed1e",
+          "position": {
+            "x": 1066,
+            "y": 104
+          }
+        },
+        {
+          "idCell": "d4f76212-f802-423c-9f69-ad4fd34cf3fe",
+          "position": {
+            "x": 1492,
+            "y": 174
+          }
+        },
+        {
+          "idCell": "58b17391-65fa-42c0-a834-92a61246fdd4",
+          "position": {
+            "x": 2518,
+            "y": -618
+          }
+        },
+        {
           "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
           "position": {
             "x": 144,
@@ -5339,10 +6045,59 @@
           }
         },
         {
+          "idCell": "361cbafd-277f-46af-85ae-985af631873a",
+          "position": {
+            "x": 1616,
+            "y": 126
+          }
+        },
+        {
+          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "position": {
+            "x": 692,
+            "y": 314
+          }
+        },
+        {
+          "idCell": "f555c0b1-a9af-4641-a104-a5d82a3721e5",
+          "position": {
+            "x": 1400,
+            "y": -208
+          }
+        },
+        {
+          "idCell": "26d9eda8-f832-455b-acaa-34fe691be97a",
+          "position": {
+            "x": 2010,
+            "y": 524
+          }
+        },
+        {
+          "idCell": "a99f25c2-708e-45a3-b6c5-f79610eac294",
+          "position": {
+            "x": 1272,
+            "y": -108
+          }
+        },
+        {
           "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
           "position": {
-            "x": 1106,
-            "y": 372
+            "x": 1060,
+            "y": 414
+          }
+        },
+        {
+          "idCell": "4329cab9-c6a5-4431-9cb2-14e988ba5378",
+          "position": {
+            "x": 1386,
+            "y": -68
+          }
+        },
+        {
+          "idCell": "757c37b5-d86a-493b-ba82-0815f0a88357",
+          "position": {
+            "x": 1434,
+            "y": 270
           }
         }
       ]

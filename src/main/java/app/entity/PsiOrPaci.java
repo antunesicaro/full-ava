@@ -11,16 +11,20 @@ import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
-* Classe que representa a tabela PSI
+* Classe que representa a tabela PSIORPACI
 * @generated
 */
 @javax.persistence.Entity
-@javax.persistence.Table(name = "\"PSI\"")
+@javax.persistence.Table(name = "\"PSIORPACI\"")
 @XmlRootElement
-@CronappSecurity(post = "Public", get = "Public", delete = "Public", put = "Public")
-@JsonFilter("app.entity.Psi")
-public class Psi implements Serializable {
+@CronappSecurity
+@JsonFilter("app.entity.PsiOrPaci")
+@CronappTable(role=CronappTableRole.CLASS)
+public class PsiOrPaci implements Serializable {
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -31,8 +35,18 @@ public class Psi implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
+
+
+    /**
+    * @generated
+    */
+    @CronappColumn(attributeType="INTEGER", label="Escolha")
+    @Column(name = "escolha", nullable = false, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Integer escolha;
 
 
     /**
@@ -45,26 +59,10 @@ public class Psi implements Serializable {
 
 
     /**
-    * @generated
-    */
-    @Column(name = "especialidade", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.String especialidade;
-
-
-    /**
-    * @generated
-    */
-    @Column(name = "crp", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.String crp;
-
-
-    /**
     * Construtor
     * @generated
     */
-    public Psi(){
+    public PsiOrPaci(){
     }
 
     /**
@@ -81,8 +79,26 @@ public class Psi implements Serializable {
     * @param id id
     * @generated
     */
-    public Psi setId(java.lang.String id) {
+    public PsiOrPaci setId(java.lang.String id) {
         this.id = id;
+        return this;
+    }
+    /**
+    * Obtém escolha
+    * return escolha
+    * @generated
+    */
+    public java.lang.Integer getEscolha() {
+        return this.escolha;
+    }
+
+    /**
+    * Define escolha
+    * @param escolha escolha
+    * @generated
+    */
+    public PsiOrPaci setEscolha(java.lang.Integer escolha) {
+        this.escolha = escolha;
         return this;
     }
     /**
@@ -99,44 +115,8 @@ public class Psi implements Serializable {
     * @param user user
     * @generated
     */
-    public Psi setUser(User user) {
+    public PsiOrPaci setUser(User user) {
         this.user = user;
-        return this;
-    }
-    /**
-    * Obtém especialidade
-    * return especialidade
-    * @generated
-    */
-    public java.lang.String getEspecialidade() {
-        return this.especialidade;
-    }
-
-    /**
-    * Define especialidade
-    * @param especialidade especialidade
-    * @generated
-    */
-    public Psi setEspecialidade(java.lang.String especialidade) {
-        this.especialidade = especialidade;
-        return this;
-    }
-    /**
-    * Obtém crp
-    * return crp
-    * @generated
-    */
-    public java.lang.String getCrp() {
-        return this.crp;
-    }
-
-    /**
-    * Define crp
-    * @param crp crp
-    * @generated
-    */
-    public Psi setCrp(java.lang.String crp) {
-        this.crp = crp;
         return this;
     }
 
@@ -147,7 +127,7 @@ public class Psi implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-Psi object = (Psi)obj;
+PsiOrPaci object = (PsiOrPaci)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }

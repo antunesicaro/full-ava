@@ -1,0 +1,178 @@
+{
+  "customId": "agendPsic",
+  "queryName": "Agendamento personalizado",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Agendamento",
+  "entityFullName": "app.entity.Agendamento",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "Agendamento",
+        "alias": "a",
+        "namespace": "app.entity.Agendamento"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "a"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": {
+      "blocklyClass": "blockly.AgendaTeste",
+      "blocklyMethod": "antesDeinserir",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "name": "Consulta a Entidades\u003capp.entity.Agendamento\u003e",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "library": false,
+        "namespace": "blockly.AgendaTeste",
+        "sourcePath": "src/main/java/blockly/AgendaTeste.blockly",
+        "language": "java",
+        "class": "blockly.AgendaTeste",
+        "methods": [
+          {
+            "name": "antesDeinserir",
+            "hasReturn": "true",
+            "params": [
+              "Consulta a Entidades\u003capp.entity.Agendamento\u003e"
+            ]
+          }
+        ]
+      }
+    },
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": {
+      "type": "server",
+      "blocklyMethod": "antesDeinserir",
+      "blocklyClass": "blockly.AgendaTeste",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "4f9506e1",
+          "name": "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.AgendaTeste",
+        "sourcePath": "src/main/java/blockly/AgendaTeste.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "antesDeinserir",
+            "hasReturn": "true",
+            "params": [
+              "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+            ]
+          },
+          {
+            "name": "depoisDeInserir",
+            "hasReturn": "true",
+            "params": [
+              "Consulta a Entidades\u0026lt;app.entity.Agendamento\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "user": "oi",
+    "user_name": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "user": null,
+    "user_name": null
+  },
+  "security": {
+    "id": null,
+    "titulo": null,
+    "start": null,
+    "end": null,
+    "startTimeZone": null,
+    "endTimeZone": null,
+    "descricao": null,
+    "reccorenciarepeticao": null,
+    "recorrenciaregra": null,
+    "recorrenciaexecao": null,
+    "isallday": null,
+    "user": null,
+    "user_name": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query51928/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}

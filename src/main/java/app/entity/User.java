@@ -12,6 +12,9 @@ import cronapi.swagger.CronappSwagger;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela USER
 * @generated
@@ -19,8 +22,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @javax.persistence.Entity
 @javax.persistence.Table(name = "\"USER\"")
 @XmlRootElement
-@CronappSecurity(post = "Public", get = "Public", delete = "Public", put = "Public")
+@CronappSecurity(post = "Administrators;Paciente;Psicologo", get = "Administrators;Paciente;Psicologo", delete = "Administrators;Paciente;Psicologo", put = "Administrators;Paciente;Psicologo")
+@CronappSwagger
 @JsonFilter("app.entity.User")
+@CronappTable(role=CronappTableRole.CLASS)
 public class User implements Serializable {
     /**
     * Variável privada para verificação da criptofrafia
@@ -38,6 +43,7 @@ public class User implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="{{'Id' | translate}}", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -45,6 +51,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="INTEGER", label="{{'AccessFailedCount' | translate}}", defaultValue = "0")
     @Column(name = "access_failed_count", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Integer accessFailedCount = 0;
@@ -53,6 +60,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Email' | translate}}")
     @Column(name = "email", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String email;
@@ -61,6 +69,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'EmailConfirmed' | translate}}", defaultValue = "true")
     @Column(name = "email_confirmed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean emailConfirmed = true;
@@ -69,6 +78,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'LockoutEnabled' | translate}}", defaultValue = "false")
     @Column(name = "lockout_enabled", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean lockoutEnabled = false;
@@ -78,6 +88,7 @@ public class User implements Serializable {
     * @generated
     */
     @Temporal(TemporalType.TIMESTAMP)
+    @CronappColumn(attributeType="DATETIME", label="{{'LockoutEnd' | translate}}")
     @Column(name = "lockout_end", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.util.Date lockoutEnd;
@@ -86,6 +97,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Name' | translate}}")
     @Column(name = "name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String name;
@@ -94,6 +106,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'NormalizedEmail' | translate}}", defaultValue = "\"\"")
     @Column(name = "normalized_email", nullable = false, unique = true, length=255, insertable=true, updatable=true)
         
         private java.lang.String normalizedEmail = "";
@@ -102,6 +115,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'NormalizedUserName' | translate}}", defaultValue = "\"\"")
     @Column(name = "normalized_user_name", nullable = false, unique = true, length=255, insertable=true, updatable=true)
         
         private java.lang.String normalizedUserName = "";
@@ -110,6 +124,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Password' | translate}}")
     @Column(name = "password", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String password;
@@ -118,6 +133,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'PhoneNumber' | translate}}")
     @Column(name = "phone_number", nullable = true, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String phoneNumber;
@@ -126,6 +142,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'PhoneNumberConfirmed' | translate}}", defaultValue = "true")
     @Column(name = "phone_number_confirmed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean phoneNumberConfirmed = true;
@@ -134,6 +151,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'SecurityStamp' | translate}}", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "security_stamp", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String securityStamp = UUID.randomUUID().toString().toUpperCase();
@@ -142,6 +160,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="{{'TwoFactorEnabled' | translate}}", defaultValue = "false")
     @Column(name = "two_factor_enabled", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean twoFactorEnabled = false;
@@ -150,6 +169,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'UserName' | translate}}")
     @Column(name = "user_name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String userName;
@@ -158,6 +178,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Theme' | translate}}")
     @Column(name = "theme", nullable = true, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String theme;
@@ -166,6 +187,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="IMAGE_DATABASE", label="{{'Picture' | translate}}")
     @Column(name = "picture", nullable = true, unique = false, length=255, insertable=true, updatable=true)
         
         private byte[] picture;
